@@ -43,6 +43,9 @@ div.ReactTags__selected a.ReactTags__remove {
 /* Styles for suggestions */
 div.ReactTags__suggestions {
   position: absolute;
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 div.ReactTags__suggestions ul {
@@ -56,6 +59,7 @@ div.ReactTags__suggestions li {
   border-bottom: 1px solid #ddd;
   padding:10px;
   margin: 0;
+  
 }
 
 div.ReactTags__suggestions li mark {
@@ -69,24 +73,31 @@ div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
   cursor: pointer;
 }
 
-.container::-webkit-scrollbar-track {
+div.ReactTags__suggestions::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
-.container::-webkit-scrollbar {
-  height: 6px;
+div.ReactTags__suggestions::-webkit-scrollbar {
   background-color: #F5F5F5;
   background: transparent;
+  width: 6px;
 }
 
-.container::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+div.ReactTags__suggestions::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: rgb(59, 59, 59);
 }
+
 
 .container {
   display: flex;
   flex-direction: row;
   border: 4px solid rgb(216, 216, 216);
+}
+
+.icon {
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 1%;
+  margin-bottom: 1%;
 }

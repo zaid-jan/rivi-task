@@ -36,14 +36,14 @@ const Search = props => {
                 delimiters={delimiters} 
                 allowDragDrop={false}
                 placeholder=''
-                minQueryLength={2}
+                minQueryLength={1}
                 renderSuggestion = {({ text }, query) => 
-                    <div >{text} ({ query })</div>
+                    <div className="suggestions">{text}</div>
                 }
             />
-            {/* <div className="icon">
+            <div className="icon">
                 <FiSearch size={25} />
-            </div> */}
+            </div>
         </div>
     )
 }
