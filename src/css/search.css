@@ -1,0 +1,92 @@
+/* Example Styles for React Tags*/
+div.ReactTags__tags {
+  position: relative;
+}
+
+/* Styles for the input */
+div.ReactTags__tagInput {
+  margin-left: 2px;
+  width: 150px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+div.ReactTags__tagInput input.ReactTags__tagInputField,
+div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+  height: 31px;
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid #eee;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Styles for selected tags */
+div.ReactTags__selected span.ReactTags__tag {
+  border: 1px solid rgb(166, 219, 226);
+  background: rgb(166, 219, 226);
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+div.ReactTags__selected a.ReactTags__remove {
+  color: #aaa;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Styles for suggestions */
+div.ReactTags__suggestions {
+  position: absolute;
+}
+
+div.ReactTags__suggestions ul {
+  list-style-type: none;
+  box-shadow: .05em .01em .5em rgba(0,0,0,.2);
+  background:  rgb(166, 219, 226);
+  width: 200px;
+}
+
+div.ReactTags__suggestions li {
+  border-bottom: 1px solid #ddd;
+  padding:10px;
+  margin: 0;
+}
+
+div.ReactTags__suggestions li mark {
+  text-decoration: underline;
+  background: none;
+  font-weight: 600;
+}
+
+div.ReactTags__suggestions ul li.ReactTags__activeSuggestion { 
+  background:  rgb(166, 219, 226); 
+  cursor: pointer;
+}
+
+.container::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+  background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: rgb(59, 59, 59);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid rgb(216, 216, 216);
+}
