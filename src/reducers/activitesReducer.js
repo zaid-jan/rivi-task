@@ -1,4 +1,8 @@
-const initialState = [];
+const initialState = {
+    isLoading:true,
+    gotError: false,
+    data: [],
+};
 
 const activitiesReducer = (state=initialState, action) => {
     // console.log("reducing fam", action.type)

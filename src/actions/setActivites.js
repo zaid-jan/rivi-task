@@ -10,7 +10,15 @@ export const setActivities = () => {
                 let ret = await axios.get(url);
                 reqArr[reqArr.length] = ret.data;
             } catch(e) {
-                throw(e)
+                const action = {
+                    type: 'setActivities',
+                    payload: {
+                        data: [],
+                        isloading: false,
+                        gotError: true,
+                    }
+                }
+                dispatch(action);
             }        
         }
         let resArr = []
@@ -21,7 +29,11 @@ export const setActivities = () => {
         }
         const action = {
             type:'setActivities', 
-            payload: resArr,
+            payload: {
+                isloading: false,
+                gotError: false,
+                data: resArr,
+            }
         }
         dispatch(action)
     }

@@ -10,7 +10,10 @@ const CitiesList = (props) => {
     })
     return (
         <div className="box" onScroll={(e) => {console.log("scrolling", e)}}>
+            <div className="contents">
                 {tags}
+            </div>
+                
         </div>
     )
 }

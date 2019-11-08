@@ -21,6 +21,7 @@ div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
   background: transparent;
   border: none;
   outline: none;
+  padding: 3%;
 }
 
 /* Styles for selected tags */
@@ -51,15 +52,13 @@ div.ReactTags__suggestions {
 div.ReactTags__suggestions ul {
   list-style-type: none;
   box-shadow: .05em .01em .5em rgba(0,0,0,.2);
-  background:  rgb(166, 219, 226);
-  width: 200px;
+  background:  rgb(166, 219, 226);  
 }
 
 div.ReactTags__suggestions li {
   border-bottom: 1px solid #ddd;
   padding:10px;
-  margin: 0;
-  
+  margin: 0;  
 }
 
 div.ReactTags__suggestions li mark {
@@ -80,12 +79,13 @@ div.ReactTags__suggestions::-webkit-scrollbar-track {
 div.ReactTags__suggestions::-webkit-scrollbar {
   background-color: #F5F5F5;
   background: transparent;
-  width: 6px;
+  width: 0px;
 }
 
 div.ReactTags__suggestions::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(255, 255, 255);
+  /* background: transparent; */
 }
 
 

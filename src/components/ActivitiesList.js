@@ -25,12 +25,13 @@ function debounce(func, wait, immediate) {
 
 const triggerRender = (iter, props) => {
     let arr = [];
-    for(let i = iter.current; i < props.activities.length; i++ ){
-        arr[arr.length] = props.activities[i];
+    for(let i = iter.current; i < props.activities.data.length; i++ ){
+        arr[arr.length] = props.activities.data[i];
     }
     window.scrollTo(0,0)
     return arr;
 }
+
 
 const ActivitiesList = props => {
     let prev = useRef(window.scrollY)
@@ -40,9 +41,7 @@ const ActivitiesList = props => {
     useEffect(() => { 
         getData(props);
         setState(triggerRender(iter, props))
-        
-
-    }, [props.activities.join(',')])   
+    }, [props.activities.data.join(',')])   
 
     const onScrollUp = debounce(function() {
         // console.log("scrolling up");
@@ -67,16 +66,15 @@ const ActivitiesList = props => {
             // console.log("scrolling down")
         }
         prev.current = window.scrollTop;
-    }
+    }  
     let activities = arr.map((item) =>{
         return (
             <span className="list" key={item.id}>{item.activity}</span>
         )
-    })
-    
+    }) 
     return (
-        <div className="box" onScroll={handleNavigation}>
-            {activities}
+        <div className="box">
+            {props.activities.isLoading ? <div className="loader"></div> : <div className="contents" onScroll={handleNavigation}>{activities}</div>}
         </div>
     )
 }
