@@ -14,7 +14,7 @@ export const setActivities = () => {
                     type: 'setActivities',
                     payload: {
                         data: [],
-                        isloading: false,
+                        isloading: true,
                         gotError: true,
                     }
                 }

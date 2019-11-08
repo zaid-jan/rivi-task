@@ -99,5 +99,5 @@ div.ReactTags__suggestions::-webkit-scrollbar-thumb {
   margin-left: auto;
   margin-top: auto;
   margin-right: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 5px;
 }
